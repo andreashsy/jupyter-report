@@ -6,3 +6,6 @@ Convert to HTML, ignoring code: `jupyter nbconvert --execute --to html first.ipy
 
 ## Before committing code to repo
 Clear output: `jupyter nbconvert --clear-output --inplace my_notebook.ipynb`
+
+## Dependencies
+Pandas, Jupyterlab, plotly
