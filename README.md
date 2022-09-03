@@ -8,4 +8,4 @@ Convert to HTML, ignoring code: `jupyter nbconvert --execute --to html first.ipy
 Clear output: `jupyter nbconvert --clear-output --inplace my_notebook.ipynb`
 
 ## Dependencies
-Pandas, Jupyterlab, plotly  
+Pandas, Jupyterlab, plotly
