@@ -8,4 +8,4 @@ WORKDIR /notebooks
 COPY $srcDir/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY $srcDir/server/notebooks ./notebooks
+ADD $srcDir/server/notebooks .
