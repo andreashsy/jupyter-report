@@ -1,0 +1,23 @@
+variables:
+  IMAGE_NAME: andyhsy/jupyter-report
+  IMAGE_TAG: jupyter-report-0.1
+
+build_image:
+  image: docker:22.06-rc
+  services:
+    - docker:22.06-rc-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  script:
+    - docker build -t $IMAGE_NAME:$IMAGE_TAG .
+    - docker push $IMAGE_NAME:$IMAGE_TAG
+
+run_tests:
+  image: python:3.11-rc-bullseye
+  # before_script:
+  #   - apt-get update && apt-get install make
+  script:
+    # - make test
+    - echo hello!
